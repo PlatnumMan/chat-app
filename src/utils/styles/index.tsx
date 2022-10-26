@@ -1,7 +1,6 @@
 import styled from "styled-components";
 import { PageProps } from "./styleTypes";
 
-
 export const SIDERBAR_WIDTH = 400;
 
 export const InputField = styled.input`
@@ -65,22 +64,42 @@ export const ConversationSidebarStyle = styled.aside`
   width: ${SIDERBAR_WIDTH}px;
   background-color: #1a1a1a;
   border-right: 1px solid #5454543d;
-  border-bottom: 1px solid #5454543d;
+  overflow: scroll;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+`;
 
-  & header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 24px;
-    background-color: #151515;
-    height: 100px;
-    & h1 {
-      font-weight: 400;
-    }
+export const ConversationSidebarHeader = styled.header`
+  position: fixed;
+  width: ${SIDERBAR_WIDTH}px;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 32px;
+  box-sizing: border-box;
+  background-color: #151515;
+  height: 100px;
+  & h1 {
+    font-weight: 400;
   }
 `;
 
 export const ConversationChannelPageStyle = styled.div`
   height: 100%;
   margin-left: ${SIDERBAR_WIDTH}px;
+`;
+
+export const ConversationSidebarContainer = styled.div``;
+
+export const ConversationSidebarItem = styled.div`
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 18px 32px;
+  box-sizing: border-box;
+  border-bottom: 1px solid #5454543d;
+  background-color: #131313;
 `;
