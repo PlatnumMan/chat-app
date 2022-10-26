@@ -67,7 +67,14 @@ export const ConversationSidebarStyle = styled.aside`
   overflow: scroll;
   &::-webkit-scrollbar {
     display: none;
+    /* width: 10px;
+    height: 5px; */
   }
+  /* &::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background-color: #2d2d2d;
+    
+  } */
 `;
 
 export const ConversationSidebarHeader = styled.header`
@@ -102,4 +109,5 @@ export const ConversationSidebarItem = styled.div`
   box-sizing: border-box;
   border-bottom: 1px solid #5454543d;
   background-color: #131313;
+  cursor: pointer;
 `;
